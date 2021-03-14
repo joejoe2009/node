@@ -1,1 +1,65 @@
-This is my week 9 page
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+  <title>Postal Rate Calculator</title>
+</head>
+​
+<body class="body_mail">
+  <header class="header_mail">
+    <div class="uspsLogo">
+        <img src="usps.jpg" alt="usps logo">
+    </div>
+    
+  </header>
+  <main class="main_mail">
+    <h1 class="h1_mail">Postage Calculator</h1>
+    
+      <!-- Make one of these for each method, having weights that relate to that method-->
+      <div class="selection">
+      <h4>Please select a postal delivery option below:</h4>
+      <form action="/rate" method="GET" id="mailForm">
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="method" value="Letters (Stamped)">Letters (Stamped)
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="method" value="Letters (Metered)">Letters (Metered)
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="method" value="Large Envelopes (Flats)">Large Envelopes (Flats)
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="method" value="First-Class Package Service - Retail">First-Class Package Service - Retail
+          </label>
+        </div>
+      </div>
+​
+      <div class="selection">
+        <h4>Please enter weight in ounces of item below:</h4>
+        <input type="number" name="weight" step="0.1" min="0.1" max="13" required>
+      </div>
+​
+      <div class="submit_mail">
+      <input type="submit" class="btn btn-danger btn-lg" name="postage" value="Show Postage Price">
+      </div>
+    </form>
+  </main>
+​
+</body>
+​
+</html>

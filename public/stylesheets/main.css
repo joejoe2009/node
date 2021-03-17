@@ -32,5 +32,8 @@
       .uspsLogo {
         background-image: url("paper.gif");
         background-color: #cccccc;
+        background-position: center;
+        background-size:auto;
+        height: 500px
        }
 
